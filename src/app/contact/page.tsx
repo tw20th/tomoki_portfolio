@@ -8,14 +8,34 @@ export default function Contact() {
     email: '',
     message: '',
   })
+  const [status, setStatus] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    alert('お問い合わせが送信されました！（仮実装）')
+    setStatus('送信中...')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setStatus('お問い合わせが送信されました！')
+        setFormData({ name: '', email: '', message: '' })
+      } else {
+        setStatus('送信に失敗しました。もう一度お試しください。')
+      }
+    } catch (error) {
+      setStatus('エラーが発生しました。')
+    }
   }
 
   return (
@@ -65,6 +85,7 @@ export default function Contact() {
         >
           送信する
         </button>
+        {status && <p className="mt-4 text-center text-gray-700">{status}</p>}
       </form>
 
       {/* SNSリンク */}
@@ -74,6 +95,7 @@ export default function Contact() {
           <a
             href="https://github.com/tomoki"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
             GitHub
@@ -81,6 +103,7 @@ export default function Contact() {
           <a
             href="https://twitter.com/tomoki"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
             Twitter
@@ -88,6 +111,7 @@ export default function Contact() {
           <a
             href="https://linkedin.com/in/tomoki"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
             LinkedIn
