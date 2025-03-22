@@ -22,7 +22,7 @@ export const projects = [
     description:
       '人気のサブスクリプションサービスをカテゴリ別にまとめたWebアプリ。Next.js + Tailwind CSS + TypeScript構成で開発。 カテゴリ別の動的ルーティング、詳細ページ、ナビゲーション、ESLint/Prettierによる品質管理、Vercelでデプロイ済み。',
     tech: ['Next.js', 'React', 'ESLint / Prettier'],
-    img: '/images/ecommerce-store.png',
+    img: '/images/subsc-site.png',
     link: 'https://subsc-site.vercel.app',
   },
   {
