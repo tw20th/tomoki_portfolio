@@ -33,8 +33,12 @@ export default function Home() {
         transition={{ duration: 1.2 }}
         className="mt-4 text-gray-200 max-w-2xl"
       >
-        Web開発が大好きなフロントエンドエンジニア。Next.js, TypeScript, Tailwind
-        CSSを活用して、美しく使いやすいUIを作るのが得意です。
+        仮想通貨管理やAI連携など、実用性とモダンな技術を取り入れたWebアプリを開発しています。
+        このポートフォリオでは、Next.jsやTypeScript、Tailwind
+        CSSなどの最新フロントエンド技術に加え、FirebaseやResendなどのバックエンド・通知サービス、そしてAIの活用も取り入れたアプリケーションを紹介しています。
+        ユーザー認証・データ管理・通知連携といった、実サービスにも応用できる仕組みを自分で設計・開発・デプロイまで一貫して行っており、見た目だけでなく、UXやセキュリティ、拡張性も意識しています。
+        また、一部のプロジェクトでは AI（ChatGPT
+        APIなど）を活用しており、ユーザーが自然な形で情報を取得できるような体験も実装しています。
       </motion.p>
 
       {/* ボタン（プロジェクトページへ） */}

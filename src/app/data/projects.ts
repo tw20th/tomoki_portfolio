@@ -27,10 +27,11 @@ export const projects = [
   },
   {
     id: '3',
-    title: 'Blog Generator',
-    description: 'ChatGPTを活用した自動記事投稿ブログ。',
-    tech: ['Next.js', 'OpenAI API', 'Vercel'],
-    img: '/images/blog-generator.png',
-    link: '/projects/3',
+    title: 'My Crypto Tool',
+    description:
+      '仮想通貨のポートフォリオ管理と価格アラート通知ができるWebアプリ。Next.js App Router + Tailwind CSS + TypeScript構成で開発。Googleログイン（OAuth認証）、保有資産のグラフ表示、Resendによるメール通知機能を実装。Firebaseでユーザー・資産情報を管理し、Vercelにデプロイ済み。',
+    tech: ['Next.js', 'React', 'Tailwind CSS', 'TypeScript', 'Firebase', 'Resend', 'NextAuth'],
+    img: '/images/my-crypto-tool.png',
+    link: 'https://my-crypto-tool.vercel.app',
   },
 ]
